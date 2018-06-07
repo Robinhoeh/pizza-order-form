@@ -1,3 +1,6 @@
+const ohHey = "Hello World";
+
+console.log(ohHey);
 /* 
 lightbox
 form
