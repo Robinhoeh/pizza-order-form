@@ -33,7 +33,8 @@ gulp.task('watch', function() {
 
 gulp.task('browser-sync', () => {
   browserSync.init({
-    server: '.'  
+    server: '.' ,
+    browser: 'google chrome' 
   })
 });
 
