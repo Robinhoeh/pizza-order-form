@@ -1,6 +1,80 @@
 @import 'setup';
 
-.container {
-	max-width: 900px;
+html, 
+body{
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	background-color: white;
+	color: black;
+	font-size: 62.5%;
+	background: #42275a;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+p{
+	line-height: normal;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 1.1px;
+}
+p + p{
+	margin-top: 25px;
+}
+h1, h2, h3, h4, h5, h6{
+	padding: 0;
+	margin: 0;
+}
+ul,
+ol{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+img{
+	width: 100%;
+	display: block;
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+}
+h1{
+	font-size: 40px;
+	color: #fff;
+}
+h2{
+	font-size: 36px;
+	font-weight: 800;
+}
+h3{
+	font-size: 30px;
+	color: #fff;
+}
+h4{
+	font-size: 25px;
+	color: #74c045;
+}
+
+// layout
+.non-fixed-layout{
+	width: 100%;
+	border: 1px solid red;
 	margin: 0 auto;
 }
+.fixed-layout{
+	max-width: 1000px;
+	margin: 0 auto;
+	border: 1px solid yellow;
+}
+
+.header-title{
+	text-align: center;
+}
+
+// form
+.form-cont{
+	display: flex;
+	border: 1px solid black;
+}
+
