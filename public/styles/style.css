@@ -258,6 +258,8 @@ h4 {
     position: absolute;
     top: 20%;
     z-index: 9999; }
+    .form-cont .option-4 .topping-items label {
+      margin-left: 20px; }
   .form-cont .option-5 {
     background: #FFC75F;
     position: absolute;
