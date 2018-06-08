@@ -199,13 +199,15 @@ h4 {
   border: 1px solid yellow; }
 
 .header-title {
-  text-align: center; }
+  text-align: center;
+  margin-top: 30px; }
 
 .form-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid black; }
+  border: 1px solid black;
+  margin-top: 60px; }
   .form-cont .form {
     margin: 0 auto;
     position: relative; }
@@ -231,8 +233,11 @@ h4 {
   .form-cont .form-item label {
     margin-bottom: 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 27px;
     color: antiquewhite; }
+  .form-cont .form-item select {
+    height: 47px;
+    font-size: 18px; }
   .form-cont .option-1 {
     background: #845EC2;
     position: absolute;
