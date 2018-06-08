@@ -93,63 +93,70 @@ h4{
 			justify-content: center;
 			box-shadow: 1px 2px 14px black;
 		}
-	}
-	.form-item label{
-		margin-bottom: 20px;
-		text-align: center;
-		font-size: 27px;
-		color: antiquewhite;
-	}
-	.form-item select{
-		height: 47px;
-    font-size: 18px;
-	}
-	.option-1{
-		background: #845EC2;
-		position: absolute;
-		z-index: 9999999;
-		top: 0;
-	}
-	.option-2{
-		background: #D65DB1;
-		position: absolute;
-		top: 6%;
-		z-index: 999999;
-	}
-	.option-3{
-		background: #FF6F91;
-		position: absolute;
-		top: 13%;
-		z-index: 99999;
-	}
-	.option-4{
-		background: #FF9671;
-		position: absolute;
-		top: 20%;
-		z-index: 9999;
-		.topping-items label{
-			margin-left: 20px;
+		.form-item label{
+			margin-bottom: 20px;
+			text-align: center;
+			font-size: 27px;
+			color: antiquewhite;
 		}
-	}
-	.option-5{
-		background: #FFC75F;
-		position: absolute;
-    top: 28%;
-		z-index: 999;
-	}
-	.option-6{
-		background: #F9F871;
-		position: relative;
-		top: 37%;
-		z-index: 99;
-	}
-	.option-6 label{
-		color: black;
-	}
-	.option-7{
-		background: #3CB371;
-		position: relative;
-		bottom: 4%;
+		.form-item select{
+			height: 47px;
+			font-size: 18px;
+		}
+		.option-1{
+			background: #845EC2;
+			position: absolute;
+			z-index: 9999999;
+			top: 0;
+		}
+		.option-2{
+			background: #D65DB1;
+			position: absolute;
+			top: 6%;
+			z-index: 999999;
+		}
+		.option-3{
+			background: #FF6F91;
+			position: absolute;
+			top: 13%;
+			z-index: 99999;
+		}
+		.option-4{
+			background: #FF9671;
+			position: absolute;
+			top: 20%;
+			padding: 16%;
+			z-index: 9999;
+			.topping-items{
+				display: flex;
+				justify-content: space-between;
+				width: 274px;
+				input{
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+		.option-5{
+			background: #FFC75F;
+			position: absolute;
+			top: 28%;
+			z-index: 999;
+		}
+		.option-6{
+			background: #F9F871;
+			position: relative;
+			top: 37%;
+			z-index: 99;
+		}
+		.option-6 label{
+			color: black;
+		}
+		.option-7{
+			background: #3CB371;
+			position: relative;
+			bottom: 4%;
+		}
 	}
 }
 
