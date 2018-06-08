@@ -78,41 +78,78 @@ h4{
 	border: 1px solid black;
 	.form{
 		margin: 0 auto;
+		position: relative;
 		.form-item{
 			display: flex;
 			margin-bottom: 20px;
 			border: 1px solid pink;
 			padding: 20%;
 			border-radius: 50%;
-			width: 142px;
-			height: 142px;
+			width: 450px;
+			height: 450px;
 			flex-direction: column;
 			justify-content: center;
+			box-shadow: 1px 2px 14px black;
 		}
 	}
 	.form-item label{
 		margin-bottom: 20px;
 		text-align: center;
-		font-size: 16px;
+		font-size: 22px;
 		color: antiquewhite;
+	}
+	.option-1{
+		background: #845EC2;
+		position: absolute;
+		z-index: 9999999;
+		top: 0;
+	}
+	.option-2{
+		background: #D65DB1;
+		position: absolute;
+		top: 6%;
+		z-index: 999999;
+	}
+	.option-3{
+		background: #FF6F91;
+		position: absolute;
+		top: 13%;
+		z-index: 99999;
+	}
+	.option-4{
+		background: #FF9671;
+		position: absolute;
+		top: 20%;
+		z-index: 9999;
+	}
+	.option-5{
+		background: #FFC75F;
+		position: absolute;
+    top: 28%;
+		z-index: 999;
+	}
+	.option-6{
+		background: #F9F871;
+		position: relative;
+		top: 37%;
+		z-index: 99;
+	}
+	.option-6 label{
+		color: black;
+	}
+	.option-7{
+		background: #3CB371;
+		position: relative;
+		bottom: 4%;
 	}
 }
 
-// 1. what size of pizza? 
-// s, m, l, xl
-// 	 - based on size there will be a fixed price
-// 2. What Dough do you want?
-//  - wheat, regular, gluten free
-// 3. What sauce do you want?
-// 4. What cheese do you want?
-// 5. What Toppings do you want?
-// 5.1 randomize order button - replicate prophesize me random from each object
-// 6. Where do you want it delivered? 
-// 	input your address here
-// 7. Display order summary before submitting: 
-// location
-// price
+.order-summary{
+	h2{
+		text-align: center;
+    color: honeydew;
+    font-size: 50px;
+	}
+}
 
-// 8. Display time it will take to be ready order on submit
-// 9. Thank you for your order
 

@@ -207,7 +207,8 @@ h4 {
   display: flex;
   border: 1px solid black; }
   .form-cont .form {
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
     .form-cont .form .form-item {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -216,17 +217,60 @@ h4 {
       border: 1px solid pink;
       padding: 20%;
       border-radius: 50%;
-      width: 142px;
-      height: 142px;
+      width: 450px;
+      height: 450px;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; }
+              justify-content: center;
+      -webkit-box-shadow: 1px 2px 14px black;
+              box-shadow: 1px 2px 14px black; }
   .form-cont .form-item label {
     margin-bottom: 20px;
     text-align: center;
-    font-size: 16px;
+    font-size: 22px;
     color: antiquewhite; }
+  .form-cont .option-1 {
+    background: #845EC2;
+    position: absolute;
+    z-index: 9999999;
+    top: 0; }
+  .form-cont .option-2 {
+    background: #D65DB1;
+    position: absolute;
+    top: 6%;
+    z-index: 999999; }
+  .form-cont .option-3 {
+    background: #FF6F91;
+    position: absolute;
+    top: 13%;
+    z-index: 99999; }
+  .form-cont .option-4 {
+    background: #FF9671;
+    position: absolute;
+    top: 20%;
+    z-index: 9999; }
+  .form-cont .option-5 {
+    background: #FFC75F;
+    position: absolute;
+    top: 28%;
+    z-index: 999; }
+  .form-cont .option-6 {
+    background: #F9F871;
+    position: relative;
+    top: 37%;
+    z-index: 99; }
+  .form-cont .option-6 label {
+    color: black; }
+  .form-cont .option-7 {
+    background: #3CB371;
+    position: relative;
+    bottom: 4%; }
+
+.order-summary h2 {
+  text-align: center;
+  color: honeydew;
+  font-size: 50px; }
