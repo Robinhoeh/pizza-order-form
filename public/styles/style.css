@@ -256,6 +256,14 @@ h4 {
     .form-cont .form .form-item select {
       height: 47px;
       font-size: 18px; }
+    .form-cont .form .next-item-button {
+      border: none;
+      background: skyblue;
+      padding: 7px 0;
+      font-size: 17px;
+      border-radius: 5px;
+      width: 50%;
+      margin: 10px auto; }
     .form-cont .form .option-1 {
       background: #845EC2;
       position: absolute;

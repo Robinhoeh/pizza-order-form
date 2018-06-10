@@ -1,8 +1,5 @@
-"use strict";
+'use strict';
 
-var ohHey = "Hello World";
-
-console.log(ohHey);
 /* 
 lightbox
 form
@@ -27,5 +24,15 @@ price
 
 8. Display time it will take and  to order on submit
 9. Thank you for your order
-
 */
+
+(function () {
+	// Define UI Variables
+
+	var pizzaSize = $('#pizzaSize option:selected').text();
+	var doughType = $('#doughType option:selected').text();
+	var sauceType = $('#sauceType option:selected').text();
+	var toppingItems = $('.toppingItems input:checked').text();
+	var cheeseType = $('#cheeseType option:selected').text();
+	var storeType = $('#storeType option:selected').text();
+});

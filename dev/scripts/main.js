@@ -1,6 +1,3 @@
-const ohHey = "Hello World";
-
-console.log(ohHey);
 /* 
 lightbox
 form
@@ -25,5 +22,18 @@ price
 
 8. Display time it will take and  to order on submit
 9. Thank you for your order
-
 */
+
+(function(){
+// Define UI Variables
+
+const pizzaSize = $('#pizzaSize option:selected').text();
+const doughType = $('#doughType option:selected').text();
+const sauceType = $('#sauceType option:selected').text();
+const toppingItems = $('.toppingItems input:checked').text();
+const cheeseType = $('#cheeseType option:selected').text();
+const storeType = $('#storeType option:selected').text();
+
+
+
+});
