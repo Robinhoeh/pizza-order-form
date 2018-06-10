@@ -42,10 +42,18 @@ $(function(){
 		const toppingItems = $('.toppingItems input:checked').val();
 		const cheeseType = $('#cheeseType option:selected').val();
 		const storeType = $('#storeType option:selected').val();
+
+
+		const orderSummaryMsg = '<h2>Thanks for ordering!</h2>';
+		const orderSummary = `<h3>Pizza size: ${pizzaSize}, Dough Type: ${doughType}, sauceType: ${sauceType}, toppingItems: ${toppingItems}, Cheese type: ${cheeseType}, Store location: ${storeType}</h3>`;
+		$('.order-summary').html(orderSummary);
+		
+	
 		
 	});	
 	
 	nextItemBtn.on('click', function(e){
+		e.preventDefault();
 		const currentBtn = $(e.currentTarget);
 		const formItem = currentBtn.closest('.form-item');
 		console.log("expecting form item",formItem);

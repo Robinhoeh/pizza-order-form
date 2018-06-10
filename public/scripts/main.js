@@ -44,9 +44,14 @@ $(function () {
 		var toppingItems = $('.toppingItems input:checked').val();
 		var cheeseType = $('#cheeseType option:selected').val();
 		var storeType = $('#storeType option:selected').val();
+
+		var orderSummaryMsg = '<h2>Thanks for ordering!</h2>';
+		var orderSummary = '<h3>Pizza size: ' + pizzaSize + ', Dough Type: ' + doughType + ', sauceType: ' + sauceType + ', toppingItems: ' + toppingItems + ', Cheese type: ' + cheeseType + ', Store location: ' + storeType + '</h3>';
+		$('.order-summary').html(orderSummary);
 	});
 
 	nextItemBtn.on('click', function (e) {
+		e.preventDefault();
 		var currentBtn = $(e.currentTarget);
 		var formItem = currentBtn.closest('.form-item');
 		console.log("expecting form item", formItem);
