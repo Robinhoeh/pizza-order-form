@@ -26,13 +26,43 @@ price
 9. Thank you for your order
 */
 
-(function () {
-	// Define UI Variables
+$(function () {
 
-	var pizzaSize = $('#pizzaSize option:selected').text();
-	var doughType = $('#doughType option:selected').text();
-	var sauceType = $('#sauceType option:selected').text();
-	var toppingItems = $('.toppingItems input:checked').text();
-	var cheeseType = $('#cheeseType option:selected').text();
-	var storeType = $('#storeType option:selected').text();
+	// next item button
+	var nextItemBtn = $('.next-item-button');
+
+	// const formItem = $('.form-item');
+
+
+	$('.form').on('submit', function (e) {
+		e.preventDefault();
+
+		// Define UI Variables
+		var pizzaSize = $('#pizzaSize option:selected').val();
+		var doughType = $('#doughType option:selected').val();
+		var sauceType = $('#sauceType option:selected').val();
+		var toppingItems = $('.toppingItems input:checked').val();
+		var cheeseType = $('#cheeseType option:selected').val();
+		var storeType = $('#storeType option:selected').val();
+	});
+
+	nextItemBtn.on('click', function (e) {
+		var currentBtn = $(e.currentTarget);
+		var formItem = currentBtn.closest('.form-item');
+		console.log("expecting form item", formItem);
+		formItem.addClass('next-item-animate');
+		console.log(currentBtn);
+	});
+
+	// $('.reset').on('submit', function(e){
+	// 	e.preventDefault();
+
+	// 	$('#pizzaSize option:selected').prop();
+	// 	$('#doughType option:selected').prop();
+	// 	$('#sauceType option:selected').prop();
+	// 	$('.toppingItems input:checked').prop('checked', false);
+	// 	$('#cheeseType option:selected').prop();
+	// 	$('#storeType option:selected').prop();
+	// });
+
 });
