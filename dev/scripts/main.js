@@ -1,10 +1,22 @@
-let countdown;
-const displayTimeRemaining = $('.display-time-remaining');
 
-$(function(){
+const nextItemBtn = $('.next-item-button');
 
-	const nextItemBtn = $('.next-item-button');
-	
+function countdown(endDate) {
+	let days, hours, minutes, seconds;
+
+	endDate = new Date(endDate).getTime();
+
+	if(isNaN(endDate)) { return; }
+	 setInterval(calculate, 1000);
+
+	function calculate() {
+		let startDate = new Date();
+		startDate = startDate.getTime();
+		console.log(startDate);
+		let timeRemaining = Number((endDate - startDate) /1000);
+	}
+}
+
 	$('.form').on('submit', function(e){
 		e.preventDefault();
 		
@@ -24,13 +36,11 @@ $(function(){
 		<h3>Topping items: ${toppingItems}</h3>
 		<h3>Cheese type: ${cheeseType}</h3> 
 		<h3>Store location: ${storeType}</h3>`;
-		$('.order-summary').html(orderSummary);
+		$('.order-summary').html(orderSummaryMsg).append(orderSummary);
 		
 		let inputButton = $(':input');
 		inputButton.val('Reorder');
 
-
-		
 	});	
 	
 	nextItemBtn.on('click', function(e){
@@ -40,6 +50,4 @@ $(function(){
 		formItem.addClass('next-item-animate');
 	});
 
-	
-	
-});
+
