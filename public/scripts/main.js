@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var nextItemBtn = $('.next-item-button');
 
@@ -18,11 +18,27 @@ function countdown(endDate) {
 	function calculate() {
 		var startDate = new Date();
 		startDate = startDate.getTime();
-		console.log(startDate);
+
 		var timeRemaining = Number((endDate - startDate) / 1000);
+
+		if (timeRemaining >= 0) {
+
+			hours = Number(timeRemaining / 3600);
+			timeRemaining = timeRemaining % 3600;
+
+			minutes = Number(timeRemaining / 60);
+			timeRemaining = timeRemaining % 60;
+
+			seconds = Number(timeRemaining);
+
+			document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
+			document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
+			document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
+		} else {
+			return;
+		}
 	}
 }
-
 $('.form').on('submit', function (e) {
 	e.preventDefault();
 
@@ -34,12 +50,14 @@ $('.form').on('submit', function (e) {
 	var cheeseType = $('#cheeseType option:selected').val();
 	var storeType = $('#storeType option:selected').val();
 
-	var orderSummaryMsg = '<h2>Thanks for ordering!</h2>';
-	var orderSummary = '<h3>Pizza size: ' + pizzaSize + '</h3>\n\t\t<h3>Dough Type: ' + doughType + '</h3> \n\t\t<h3>Sauce Type: ' + sauceType + '</h3>\n\t\t<h3>Topping items: ' + toppingItems + '</h3>\n\t\t<h3>Cheese type: ' + cheeseType + '</h3> \n\t\t<h3>Store location: ' + storeType + '</h3>';
-	$('.order-summary').html(orderSummaryMsg).append(orderSummary);
+	var orderSummaryMsg = "<h2>Thanks for ordering!</h2>";
+	var readyTimeMsg = "<h2>Your order will be ready in:</h2>";
+	var orderSummary = "<h3>Pizza size: " + pizzaSize + "</h3>\n\t<h3>Dough Type: " + doughType + "</h3> \n\t<h3>Sauce Type: " + sauceType + "</h3>\n\t<h3>Topping items: " + toppingItems + "</h3>\n\t<h3>Cheese type: " + cheeseType + "</h3> \n\t<h3>Store location: " + storeType + "</h3>";
+	$('.order-summary').html(orderSummaryMsg).append(orderSummary).append(readyTimeMsg);
 
-	var inputButton = $(':input');
-	inputButton.val('Reorder');
+	(function () {
+		countdown('06/12/2018 07:30:00 PM');
+	})();
 });
 
 nextItemBtn.on('click', function (e) {
