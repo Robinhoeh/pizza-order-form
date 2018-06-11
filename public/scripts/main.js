@@ -28,11 +28,7 @@ price
 
 $(function () {
 
-	// next item button
 	var nextItemBtn = $('.next-item-button');
-
-	// const formItem = $('.form-item');
-
 
 	$('.form').on('submit', function (e) {
 		e.preventDefault();
@@ -41,33 +37,22 @@ $(function () {
 		var pizzaSize = $('#pizzaSize option:selected').val();
 		var doughType = $('#doughType option:selected').val();
 		var sauceType = $('#sauceType option:selected').val();
-		var toppingItems = $('.toppingItems input:checked').val();
+		var toppingItems = $('checkbox:checked').val();
 		var cheeseType = $('#cheeseType option:selected').val();
 		var storeType = $('#storeType option:selected').val();
 
 		var orderSummaryMsg = '<h2>Thanks for ordering!</h2>';
-		var orderSummary = '<h3>Pizza size: ' + pizzaSize + ', Dough Type: ' + doughType + ', sauceType: ' + sauceType + ', toppingItems: ' + toppingItems + ', Cheese type: ' + cheeseType + ', Store location: ' + storeType + '</h3>';
+		var orderSummary = '<h3>Pizza size: ' + pizzaSize + '</h3>\n\t\t<h3>Dough Type: ' + doughType + '</h3> \n\t\t<h3>Sauce Type: ' + sauceType + '</h3>\n\t\t<h3>Topping items: ' + toppingItems + '</h3>\n\t\t<h3>Cheese type: ' + cheeseType + '</h3> \n\t\t<h3>Store location: ' + storeType + '</h3>';
 		$('.order-summary').html(orderSummary);
+
+		var inputButton = $(':input');
+		inputButton.val('Reorder');
 	});
 
 	nextItemBtn.on('click', function (e) {
 		e.preventDefault();
 		var currentBtn = $(e.currentTarget);
 		var formItem = currentBtn.closest('.form-item');
-		console.log("expecting form item", formItem);
 		formItem.addClass('next-item-animate');
-		console.log(currentBtn);
 	});
-
-	// $('.reset').on('submit', function(e){
-	// 	e.preventDefault();
-
-	// 	$('#pizzaSize option:selected').prop();
-	// 	$('#doughType option:selected').prop();
-	// 	$('#sauceType option:selected').prop();
-	// 	$('.toppingItems input:checked').prop('checked', false);
-	// 	$('#cheeseType option:selected').prop();
-	// 	$('#storeType option:selected').prop();
-	// });
-
 });

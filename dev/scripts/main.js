@@ -26,11 +26,7 @@ price
 
 $(function(){
 
-	// next item button
 	const nextItemBtn = $('.next-item-button');
-
-	// const formItem = $('.form-item');
-	
 	
 	$('.form').on('submit', function(e){
 		e.preventDefault();
@@ -39,39 +35,29 @@ $(function(){
 		const pizzaSize = $('#pizzaSize option:selected').val();
 		const doughType = $('#doughType option:selected').val();
 		const sauceType = $('#sauceType option:selected').val();
-		const toppingItems = $('.toppingItems input:checked').val();
+		const toppingItems = $('checkbox:checked').val();
 		const cheeseType = $('#cheeseType option:selected').val();
 		const storeType = $('#storeType option:selected').val();
 
 
-		const orderSummaryMsg = '<h2>Thanks for ordering!</h2>';
-		const orderSummary = `<h3>Pizza size: ${pizzaSize}, Dough Type: ${doughType}, sauceType: ${sauceType}, toppingItems: ${toppingItems}, Cheese type: ${cheeseType}, Store location: ${storeType}</h3>`;
+		const orderSummaryMsg = `<h2>Thanks for ordering!</h2>`;
+		const orderSummary = `<h3>Pizza size: ${pizzaSize}</h3>
+		<h3>Dough Type: ${doughType}</h3> 
+		<h3>Sauce Type: ${sauceType}</h3>
+		<h3>Topping items: ${toppingItems}</h3>
+		<h3>Cheese type: ${cheeseType}</h3> 
+		<h3>Store location: ${storeType}</h3>`;
 		$('.order-summary').html(orderSummary);
 		
-	
-		
+		let inputButton = $(':input');
+		inputButton.val('Reorder');
 	});	
 	
 	nextItemBtn.on('click', function(e){
 		e.preventDefault();
 		const currentBtn = $(e.currentTarget);
 		const formItem = currentBtn.closest('.form-item');
-		console.log("expecting form item",formItem);
 		formItem.addClass('next-item-animate');
-		console.log(currentBtn);
 	});
-
-	 
-	// $('.reset').on('submit', function(e){
-	// 	e.preventDefault();
-
-	// 	$('#pizzaSize option:selected').prop();
-	// 	$('#doughType option:selected').prop();
-	// 	$('#sauceType option:selected').prop();
-	// 	$('.toppingItems input:checked').prop('checked', false);
-	// 	$('#cheeseType option:selected').prop();
-	// 	$('#storeType option:selected').prop();
-	// });
-	
 	
 });
