@@ -1,6 +1,7 @@
 
 const nextItemBtn = $('.next-item-button');
 
+// countdown - hard coded
 function countdown(endDate) {
 	let hours, minutes, seconds;
 
@@ -36,6 +37,11 @@ function countdown(endDate) {
 		}
 	}
 }
+
+// on load - focus on input
+$('#pizzaSize').focus();
+
+// order form
 $('.form').on('submit', function(e){
 	e.preventDefault();
 	
@@ -71,9 +77,7 @@ nextItemBtn.on('click', function(e){
 	formItem.addClass('next-item-animate');
 });
 
-
 $('.reset').on('click', function () {
-	$('.form').reset();
+	location.reload();
 });
-
 
