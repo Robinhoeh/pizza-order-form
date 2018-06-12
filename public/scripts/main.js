@@ -3,8 +3,7 @@
 var nextItemBtn = $('.next-item-button');
 
 function countdown(endDate) {
-	var days = void 0,
-	    hours = void 0,
+	var hours = void 0,
 	    minutes = void 0,
 	    seconds = void 0;
 
@@ -13,23 +12,24 @@ function countdown(endDate) {
 	if (isNaN(endDate)) {
 		return;
 	}
+
 	setInterval(calculate, 1000);
 
 	function calculate() {
 		var startDate = new Date();
 		startDate = startDate.getTime();
 
-		var timeRemaining = Number((endDate - startDate) / 1000);
+		var timeRemaining = parseInt((endDate - startDate) / 1000);
 
 		if (timeRemaining >= 0) {
 
-			hours = Number(timeRemaining / 3600);
+			hours = parseInt(timeRemaining / 3600);
 			timeRemaining = timeRemaining % 3600;
 
-			minutes = Number(timeRemaining / 60);
+			minutes = parseInt(timeRemaining / 60);
 			timeRemaining = timeRemaining % 60;
 
-			seconds = Number(timeRemaining);
+			seconds = parseInt(timeRemaining);
 
 			document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
 			document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
@@ -65,4 +65,8 @@ nextItemBtn.on('click', function (e) {
 	var currentBtn = $(e.currentTarget);
 	var formItem = currentBtn.closest('.form-item');
 	formItem.addClass('next-item-animate');
+});
+
+$('.reset').on('click', function () {
+	$('.form').reset();
 });

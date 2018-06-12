@@ -2,28 +2,31 @@
 const nextItemBtn = $('.next-item-button');
 
 function countdown(endDate) {
-	let days, hours, minutes, seconds;
+	let hours, minutes, seconds;
 
 	endDate = new Date(endDate).getTime();
 
-	if(isNaN(endDate)) { return; }
-	 setInterval(calculate, 1000);
+	if(isNaN(endDate)) { 
+		return; 
+	}
+	
+	setInterval(calculate, 1000);
 
 	function calculate() {
 		let startDate = new Date();
 		startDate = startDate.getTime();
 
-		let timeRemaining = Number((endDate - startDate) /1000);
+		let timeRemaining = parseInt((endDate - startDate) /1000);
 
 		if (timeRemaining >= 0) {
 
-			hours = Number(timeRemaining / 3600);
+			hours = parseInt(timeRemaining / 3600);
 			timeRemaining = (timeRemaining % 3600);
 
-			minutes = Number(timeRemaining / 60);
+			minutes = parseInt(timeRemaining / 60);
 			timeRemaining = (timeRemaining % 60);
 
-			seconds = Number(timeRemaining);
+			seconds = parseInt(timeRemaining);
 
       document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
       document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
@@ -68,5 +71,9 @@ nextItemBtn.on('click', function(e){
 	formItem.addClass('next-item-animate');
 });
 
+
+$('.reset').on('click', function () {
+	$('.form').reset();
+});
 
 
