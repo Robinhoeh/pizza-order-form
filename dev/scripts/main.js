@@ -57,6 +57,8 @@ pizzaApp.init = function () {
 	// order form
 	$('.form').on('submit', function(e){
 		e.preventDefault();
+
+		
 	
 	// Define UI Variables
 		pizzaApp.pizzaSize = $('#pizzaSize option:selected').val();
