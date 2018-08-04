@@ -53,7 +53,6 @@ $('.form').on('submit', function(e){
 	const cheeseType = $('#cheeseType option:selected').val();
 	const storeType = $('#storeType option:selected').val();
 
-
 	const orderSummaryMsg = `<h2>Thanks for ordering!</h2>`;
 	const readyTimeMsg = `<h2>Your order will be ready in:</h2>`;
 	const orderSummary = `<h3>Pizza size: ${pizzaSize}</h3>
